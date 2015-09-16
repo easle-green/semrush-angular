@@ -13,4 +13,12 @@ npm install -g clean-css
 gulp start
 ```
 
-Now browse to the app at `http://localhost:8000/app/index.html`.
+Now browse to the app at `http://localhost:8000/app/`.
+
+### Make the clean build
+
+```
+gulp build
+```
+
+Now browse to the build at `http://localhost:8000/build/`.
