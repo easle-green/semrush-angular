@@ -1,0 +1,36 @@
+<div class="navigation">
+	<ul class="nav nav-pills pull-left col-md-5">
+		<nav-item text="Список" target="/list"></nav-item>
+		<nav-item text="Избранное" target="/favorites"></nav-item>
+		<nav-item text="Статистика" target="/stats"></nav-item>
+	</ul>
+
+	<div
+		ng-controller="FavCountCtrl"
+		class="navigation__count col-md-2 pull-left"
+	>
+		<div ng-if="count() > 0">
+			<span class="navigation__count-icon glyphicon glyphicon-star"></span>
+			<span class="navigation__count-count">сохранено: {{count()}}</span>
+		</div>
+	</div>
+
+	<ul
+		ng-controller="BrandCtrl"
+		id="brand-switcher"
+		class="nav navigation__brand pull-right"
+	>
+		<li
+			ng-repeat="li in [
+				'',
+				'Nissan',
+				'Mitsubishi',
+				'Ford',
+				'Volvo'
+			]"
+			ng-class="{'navigation__brand-active': currentBrand.brand==li}"
+		>
+			<a href="javascript:void(0)" ng-click="switchBrand(li)">{{li != '' ? li : 'Все'}}</a>
+		</li>
+	</ul>
+</div>

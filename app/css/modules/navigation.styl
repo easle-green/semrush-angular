@@ -1,0 +1,80 @@
+.navigation
+  background-color #eeeeee
+  font-size: 1.7em
+  padding 0.5em 0.7em
+  margin-bottom 10px
+  border-bottom 1px solid #563d7c
+  display table
+  width 100%
+
+
+  &__brand
+    font-size 0.8em
+    background-color #D8D7DA
+    border-radius 15px
+    border 1px solid #C1C1C3
+    margin-top 9px
+
+    li
+      > a
+        padding 2px 7px
+        border-right 1px solid #BBB8BF
+        color #6D6D6D
+        transition all 0.3s ease-in-out
+        &:hover
+          background transparent
+      &:last-child > a
+        border-right none
+
+    li&-active
+      > a
+        &,
+        &:hover,
+        &:focus
+          background-color #fff
+      &:first-child > a
+        border-radius 15px 0 0 15px
+      &:last-child > a
+        border-radius 0 15px 15px 0
+
+
+  &__count
+    font-size 0.7em
+    color #B5B5B5
+    margin-top 12px
+
+    &-icon
+      vertical-align text-top
+
+
+/* Копия бутрстрапа без > для функционирования директивы */
+.nav li
+  position relative
+  display block
+  float left
+
+  > a
+    position: relative
+    display: block
+    transition all 0.3s ease-in-out
+
+
+.nav-pills li
+
+  &.active>a,
+  &.active>a:focus,
+  &.active>a:hover
+    color: #fff
+    background-color: #563d7c
+    text-decoration: none
+
+  > a
+    border-radius: 4px
+    padding: 10px 15px
+    &:focus,
+    &:hover
+      text-decoration: none
+      background-color: #eee
+
+  +li
+    margin-left: 2px

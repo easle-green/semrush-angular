@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="semAng" data-ng-app="semAng">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Semrush test work // Angular // Viktor Boiko</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+      <!-- @ifdef BUILD -->
+      <link rel="stylesheet" type="text/css" media="screen" href="assets/stylesheet.min.css?v=<!-- @echo TIMESTAMP -->">
+      <!-- @endif -->
+
+      <!-- @ifndef BUILD -->
+      <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/application.css">
+      <!-- @endif -->
+
+      <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css' />
+
+	</head>
+
+  <body>
+
+		<div class="container" role="main">
+      <div class="wrapper">
+        <div data-ng-include="'views/_partials/header.html'"></div>
+        <div data-ng-view="" class="content" id="content"></div>
+      </div>
+		</div>
+
+    <!-- @ifndef BUILD -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/underscore/underscore-min.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="/bower_components/ngstorage/ngStorage.min.js" type="text/javascript"></script>
+    <script src="/bower_components/highcharts-release/highcharts.js" type="text/javascript"></script>
+    <script src="/bower_components/highcharts-ng/dist/highcharts-ng.min.js" type="text/javascript"></script>
+
+    <script src="/app/js/application.js"></script>
+    <script src="/app/js/common/directives/navigation.js"></script>
+    <script src="/app/js/common/models/Autos.js"></script>
+    <script src="/app/js/common/models/Storage.js"></script>
+
+    <script src="/app/js/brand/_CurrentBrand.js"></script>
+    <script src="/app/js/brand/BrandCtrl.js"></script>
+
+    <script src="/app/js/list/ListCtrl.js"></script>
+    <script src="/app/js/list/ZoomCtrl.js"></script>
+    <script src="/app/js/list/__routes.js"></script>
+    <script src="/app/js/list/__filters.js"></script>
+
+    <script src="/app/js/favorites/FavCtrl.js"></script>
+    <script src="/app/js/favorites/__routes.js"></script>
+
+    <script src="/app/js/stats/StatsCtrl.js"></script>
+    <script src="/app/js/stats/__routes.js"></script>
+
+    <!-- @endif -->
+
+    <!-- @ifdef BUILD -->
+    <script src="assets/javascripts.min.js?v=<!-- @echo TIMESTAMP -->"></script>
+    <!-- @endif -->
+
+	</body>
+
+</html>

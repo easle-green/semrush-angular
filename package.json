@@ -1,0 +1,38 @@
+{
+  "name": "Semrush test work // Angular // Viktor Boiko",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "repository": "https://github.com/easle-green/semrush-angular.git",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.6.1",
+    "bower": "^1.3.1",
+    "shelljs": "^0.2.6"
+  },
+  
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "gulp start"
+  },
+  
+  "dependencies": {
+    "gulp": ">=3.8.8",
+    "gulp-clean": ">=0.3.1",
+    "gulp-concat": ">=2.4.1",
+    "gulp-css-base64": ">=1.3.1",
+    "gulp-minify-css": ">=0.3.11",
+    "gulp-ng-annotate": ">=0.3.3",
+    "gulp-preprocess": ">=1.1.1",
+    "gulp-sourcemaps": ">=1.2.4",
+    "gulp-uglify": ">=1.0.1",
+    "gulp-webserver": "^0.9.0",
+    "preprocess": "^2.1.0",
+    "require-dir": "^0.1.0",
+    "gulp-stylus": ">=2.0.6",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-cleancss": ">=0.2.2",
+    "nib": ">=1.1.0"
+  }
+}

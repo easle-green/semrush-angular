@@ -1,0 +1,25 @@
+<div class="content">
+
+  <highchart
+      ng-if="data.length"
+      config="chartConfig"
+  ></highchart>
+
+  <div
+    class="text-center"
+    ng-if="data.length"
+  >
+    <a
+      ng-click="clearAll()"
+      class="btn btn-default"
+    >Очистить статистику</a>
+  </div>
+
+  <div
+    ng-if="!data.length"
+    class="info_message"
+  >
+    <h3>Статистика полностью и безоговорочно пуста!</h3>
+    <p>Что бы это ни значило, вам срочно нужно перейти на <a href="#/list">страницу списка авто</a>, и добавить в избранное несколько автомобилей. Желательно нескольких проихводителей.</p>
+  </div>
+</div>

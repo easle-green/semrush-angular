@@ -1,0 +1,90 @@
+<div class="content">
+  <table
+    ng-show="autosList.$resolved && cars.length"
+    class="table table-striped table-bordered table-hover table-condensed"
+  >
+
+    <colgroup>
+      <col width="160" />
+      <col ng-if="!favorite_list" width="160" />
+      <col />
+      <col width="27" />
+    </colgroup>
+
+    <thead>
+    <tr>
+      <th>Изображение</th>
+      <th ng-if="!favorite_list">Модель</th>
+      <th>Описание</th>
+      <th>&nbsp;</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    <tr
+      ng-repeat="car in cars | brandFilter"
+    >
+
+      <td>
+        <img class="zoom_image" ng-src="/public/images/{{car.brand}}/{{car.image}}" alt=""/>
+      </td>
+
+      <td ng-if="!favorite_list">
+        {{car.brand}} {{car.model}}
+      </td>
+
+      <td>
+        <h4 ng-if="favorite_list">{{car.brand}} {{car.model}}</h4>
+        {{car.description}}
+      </td>
+
+      <td>
+        <a
+          ng-click="favorite(car)"
+          ng-if="!favorite_list"
+          href="javascript: void(0)"
+          class="table__favorited"
+        >
+          <span
+            class="glyphicon"
+            ng-class="{
+              'glyphicon-star': isFave(car.id),
+              'glyphicon-star-empty': !isFave(car.id)
+            }"
+          ></span>
+        </a>
+
+        <a
+          ng-click="remove(car.id)"
+          ng-if="favorite_list"
+          href="javascript: void(0)"
+          class="table__favorited"
+        >
+          <span class="glyphicon glyphicon-remove"></span>
+        </a>
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+
+  <div
+    class="text-center"
+    ng-if="autosList.$resolved && cars.length && favorite_list"
+  >
+    <a
+      ng-click="clearAll()"
+      class="btn btn-default"
+    >Очистить избранное</a>
+  </div>
+
+  <div
+    ng-if="autosList.$resolved && !cars.length"
+    class="info_message"
+  >
+    <h3>К сожалению, у вас отсутствуют сохраненные автомобили.</h3>
+    <p>Чтобы исправить это досадное недоразумение, отправьтесь на <a href="#/list">страницу списка автомобилей</a>, где вы можете добавить в избранное любые интересующие васмодели.</p>
+  </div>
+
+</div>
